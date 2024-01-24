@@ -23,5 +23,8 @@ urlpatterns = [
     # PAGES:
     path('', include('pages.urls')),
 
+    # PRODUCTS:
+    path('urunler/', include('products.urls')),
+
     path('admin/', admin.site.urls),
 ]
