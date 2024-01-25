@@ -1,8 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def urunler(request):
-    return HttpResponse('Ürün Listesi')
+def index(request):
+    return render(request, 'products/index.html')
 
 def details(request):
     return HttpResponse('Merhaba')
