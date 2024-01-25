@@ -4,7 +4,7 @@ from django.shortcuts import render
 def categories_view(request):
     return render(request, 'products/categories.html')
 
-def urunler_view(request):
+def products_view(request):
     return render(request, 'products/urunler.html')
 
 def details(request):
