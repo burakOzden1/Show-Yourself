@@ -1,8 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def index(request):
-    return render(request, 'products/index.html')
+def categories_view(request):
+    return render(request, 'products/categories.html')
+
+def urunler_view(request):
+    return render(request, 'products/urunler.html')
 
 def details(request):
     return HttpResponse('Merhaba')

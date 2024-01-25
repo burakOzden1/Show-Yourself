@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css"/>
-    <title>Document</title>
+    {% block css_files %}{% endblock css_files %}
+    <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
@@ -12,16 +13,16 @@
             <a href="/" class="navbar-brand">Course App</a>
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a href="" class="nav-link">Ürünler</a>
+                    <a href="/urunler/list" class="nav-link">Ürünler</a>    
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">kategoriler</a>
+                    <a href="/urunler" class="nav-link">kategoriler</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">İletişim</a>
+                    <a href="/" class="nav-link">İletişim</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Hakkımızda</a>
+                    <a href="/" class="nav-link">Hakkımızda</a>
                 </li>
             </ul>
         </div>
@@ -29,17 +30,10 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col3">
-                <div class="list-group">
-                    <a href="" class="list-group-item list-grup-item-action">Binek</a>
-                    <a href="" class="list-group-item list-grup-item-action">Ağır Vasıta</a>
-                    <a href="" class="list-group-item list-grup-item-action">Hafif Ticari Araçlar</a>
-                    <a href="" class="list-group-item list-grup-item-action">Otobüs</a>
-                    <a href="" class="list-group-item list-grup-item-action">Traktör</a>
-                    <a href="" class="list-group-item list-grup-item-action">Treyler</a>
-                </div>
+                {% block cards %}{% endblock cards %}
             </div>
             <div class="col9">
-
+                {% block content %}{% endblock content %}
             </div>
         </div>
     </div>
@@ -47,3 +41,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+{% block js_files %}{% endblock js_files %}
